@@ -1,0 +1,21 @@
+.cataloging {
+  padding-top: 82px;
+  padding-bottom: 70px;
+}
+@media (max-width: 1439px) {
+  .cataloging {
+    padding-top: 60px;
+    padding-bottom: 60px;
+  }
+}
+@media (max-width: 1199px) {
+  .cataloging {
+    padding-bottom: 55px;
+  }
+}
+@media (max-width: 767px) {
+  .cataloging {
+    padding-top: 44px;
+    padding-bottom: 44px;
+  }
+}

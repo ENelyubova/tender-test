@@ -1,0 +1,26 @@
+.solution {
+  padding-top: 80px;
+  padding-bottom: 54px;
+  &-list {
+    li {
+      background-image: url(../images/icon/check.svg);
+    }
+  }
+}
+@media (max-width: 1439px) {
+  .solution {
+    padding-top: 60px;
+    padding-bottom: 60px;
+  }
+}
+@media (max-width: 1199px) {
+  .solution {
+    padding-bottom: 30px;
+  }
+}
+@media (max-width: 767px) {
+  .solution {
+    padding-top: 44px;
+    padding-bottom: 24px;
+  }
+}

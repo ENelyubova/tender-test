@@ -1,0 +1,96 @@
+.quote {
+  padding-top: 130px;
+  padding-bottom: 80px;
+  &-content {
+    max-width: 965px;
+    margin: 0 auto;
+  }
+}
+blockquote {
+  position: relative;
+  margin: 0;
+  p {
+    font-size: 20px;
+    line-height: 1.6;
+  }
+  &:before {
+    content: "";
+    position: absolute;
+    top: -18px;
+    left: -104px;
+    background-image: url(../images/icon/quote.svg);
+    background-repeat: no-repeat;
+    background-size: contain;
+    width: 64px;
+    height: 64px;
+  }
+}
+.quote-author {
+  margin-top: 24px;
+  &__avatar {
+    position: relative;
+    margin-right: 12px;
+    width: 44px;
+    height: 44px;
+    border-radius: 50%;
+    overflow: hidden;
+  }
+  &__text {
+    width: calc(100% - 56px);
+  }
+  &__name {
+    font-weight: 500;
+    line-height: 1.4;
+  }
+  &__position {
+    color: $color-gray;
+  }
+}
+@media (max-width: 1780px) {
+  .quote {
+    padding-top: 120px;
+    &-content {
+      max-width: 720px;
+    }
+  }
+}
+@media (max-width: 1439px) {
+  .quote {
+    padding-top: 70px;
+    &-content {
+      max-width: 576px;
+    }
+  }
+  blockquote {
+    &:before {
+      width: 56px;
+      height: 56px;
+      top: -10px;
+      left: -60px;
+    }
+  }
+}
+@media (max-width: 767px) {
+  .quote {
+    padding-top: 50px;
+    padding-bottom: 44px;
+    &-content {
+      max-width: none;
+      width: 83%;
+      margin: 0;
+      margin-left: auto;
+    }
+  }
+  blockquote {
+    p {
+      font-size: 14px;
+      line-height: 1.4;
+    }
+    &:before {
+      width: 40px;
+      height: 40px;
+      top: -10px;
+      left: -48px;
+    }
+  }
+}

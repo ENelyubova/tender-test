@@ -1,0 +1,51 @@
+.project {
+  position: relative;
+  padding-top: 84px;
+  padding-bottom: 74px;
+  overflow: hidden;
+  &-slider {
+    width: 94%;
+    margin-top: 54px;
+    .slick-list {
+      overflow: visible;
+    }
+    .slick-track {
+      display: flex;
+      align-items: center;
+      height: 100%;
+    }
+    &__item {
+      display: flex !important;
+      align-items: center;
+      height: auto;
+    }
+  }
+}
+@media (max-width: 1199px) {
+  .project {
+    padding-top: 63px;
+    padding-bottom: 107px;
+    &-slider {
+      &__item {
+        margin-right: 76px;
+        &:not(.slick-current) {
+          img {
+            margin: 0 auto;
+          }
+        }
+      }
+    }
+  }
+}
+@media (max-width: 767px) {
+  .project {
+    padding-top: 44px;
+    padding-bottom: 44px;
+    &-slider {
+      margin-top: 40px;
+      &__item {
+        margin-right: 59px;
+      }
+    }
+  }
+}

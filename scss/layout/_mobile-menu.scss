@@ -1,0 +1,33 @@
+.mobile-panel {
+  position: relative;
+  margin-right: 24px;
+  @media (min-width: 1198px) {
+    display: none;
+  }
+}
+.m-menu-button {
+  position: relative;
+  background: transparent;
+  width: 18px;
+  height: 18px;
+  overflow: hidden;
+  cursor: pointer;
+  z-index: 10;
+  @include transform-mobile-link;
+  .line {
+    display: block;
+    width: 100%;
+    height: 2px;
+    background: $color-black;
+    margin: 3px 0;
+    opacity: 1;
+  }
+}
+@media (max-width: 767px){
+  .mobile-panel{
+    margin-right: 14.5px;
+  }
+  .m-menu-button{
+    width: 15px;
+  }
+}

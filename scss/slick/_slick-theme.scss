@@ -1,0 +1,128 @@
+@charset "UTF-8";
+
+/* Slick icon entity codes outputs the following*/
+/* "\2022" outputs ascii character "•"*/
+
+$slick-font-path: "../stick/fonts/" !default;
+$slick-font-family: "slick" !default;
+$slick-loader-path: "../stick/" !default;
+$slick-dot-color: black !default;
+$slick-dot-color-active: $slick-dot-color !default;
+$slick-dot-character: "\2022" !default;
+$slick-dot-size: 6px !default;
+$slick-opacity-default: 0.75 !default;
+$slick-opacity-on-hover: 1 !default;
+$slick-opacity-not-active: 0.25 !default;
+
+/* Slider */
+.slick-list {
+  .slick-loading & {
+    background: #fff url("../images/ajax-loader.gif") center center no-repeat;
+  }
+}
+
+/* Arrows */
+.slick-prev,
+.slick-next {
+  position: relative;
+  padding: 0;
+  width: 40px;
+  height: 40px;
+  text-align: center;
+  border: none;
+  border-radius: 50%;
+  border: 1px solid $color-gray;
+  background: transparent;
+  font-size: 0;
+  cursor: pointer;
+  z-index: 10;
+  @include transition(all 0.3s ease);
+  svg {
+    @include transition(all 0.3s ease);
+  }
+  &.slick-disabled {
+    opacity: 0.5;
+    outline: none;
+  }
+  &:hover {
+    &:not(.slick-disabled) {
+      background-color: $color-red;
+      border: 1px solid $color-red;
+      svg {
+        path {
+          fill: $color-white;
+        }
+      }
+    }
+  }
+  &:focus {
+    outline: 0px solid transparent !important;
+  }
+}
+.slick-prev {
+  margin-right: 8px;
+}
+.lin-gradient-start {
+  stop-color: #e4175a;
+}
+.lin-gradient-end {
+  stop-color: #ff558d;
+}
+
+.slick-dots {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  /* width: 20%;*/
+  position: absolute;
+  bottom: -25px;
+  left: calc(50% + 192px);
+  transform: translateX(-50%);
+  z-index: 8;
+  li {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-right: 8px;
+    height: 12px;
+    width: 12px;
+    border-radius: 50%;
+    button {
+      width: 12px;
+      height: 12px;
+      border: none;
+      padding: 0;
+      border-radius: 50%;
+      outline: none;
+      line-height: 0px;
+      font-size: 0px;
+      background: #cccccc;
+      cursor: pointer;
+    }
+  }
+  .slick-active {
+    button {
+      background: $color-red;
+    }
+  }
+}
+@media (max-width: 1780px) {
+  .slick-dots {
+    left: 50%;
+  }
+}
+@media (max-width: 1199px) {
+  .slick-dots {
+    bottom: -53px;
+  }
+}
+@media (max-width: 767px) {
+  .slick-prev,
+  .slick-next {
+    width: 32px;
+    height: 32px;
+  }
+  .slick-dots {
+    bottom: -36px;
+  }
+}
